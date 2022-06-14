@@ -7,6 +7,11 @@
   pointer-events: none;
 }
 
+body {
+  background-image: url("../src/imagenes/marble-4700915_1920.jpg");
+  background-size: cover;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

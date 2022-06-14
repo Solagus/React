@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis&family=Lobster&family=Mochiy+Pop+P+One&family=Roboto:wght@100&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+#logo{
+    font-family: Lobster;
+    padding-top: 0.5em;
+}
+
+#paginas{
+    padding-top: 1em;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    font-family: Dosis;
+    list-style: none;
+    font-size: 160%;
+}
+
+a{
+    text-decoration: none;
+    outline: none;
+    color: black !important;
+}
