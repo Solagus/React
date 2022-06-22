@@ -1,12 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
-import Navbar from "./componentes/Navbar";
+import Col from "react-bootstrap/Col"
+import Navbara from "./componentes/Navbar";
+import NavLat from "./componentes/NavegadorLateral"
+import Cards from "./componentes/Cards"
+import Footer from "./componentes/Footer"
 
 function App() {
   return (
     <div className="App">
       <body>
-        <Navbar />
+        <Navbara />
+        <div className="d-flex">
+          <Col><NavLat/></Col>
+          <Col>
+            <Col className="d-flex">
+              <Cards/>
+              <Cards/>
+              <Cards/>
+            </Col>
+            <Col className="d-flex">
+              <Cards/>
+              <Cards/>
+              <Cards/>
+            </Col>
+          </Col>
+        </div>
+        <Footer/>
       </body>
     </div>
   );

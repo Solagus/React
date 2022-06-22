@@ -1,0 +1,48 @@
+footer {
+    grid-area: footer;
+    width: auto;
+    height: 6em;
+    background-color: #57737a;
+  }
+  
+  footer .footer__logo {
+    font-family: Dosis;
+    font-weight: 100;
+    color: white;
+  }
+  
+  footer .footer__telefono,
+  footer .footer__derechos {
+    line-height: 1;
+    font-family: Roboto;
+    color: white;
+  }
+  footer {
+    grid-area: footer;
+    width: auto;
+    height: 6em;
+    background-color: #57737a;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    line-height: 1.7;
+  }
+  .footer__logo {
+    display: inline;
+    font-size: 150%;
+    margin-left: 0.5em;
+  }
+  .footer__telefono {
+    padding-left: 0.5em;
+  }
+  .footer__instagram {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 0.5em;
+    position: relative;
+    top: 0.15em;
+  }
+  .footer__derechos {
+    padding-right: 0.5em;
+  }  

@@ -1,0 +1,21 @@
+.dropdownMenu {
+  background-image: url("../imagenes/modern-white-background-with-shiny-gold-geometric-element-abstract-light-clean-silver-background-vector.jpg");
+  background-size: 220%;
+  width: 25em;
+  height: auto;
+}
+.lista {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.texto_del_carrito {
+  font-family: "Dancing Script";
+  font-size: 250%;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 0.5em;
+}
+#finalizarCompra {
+  width: 95%;
+}
