@@ -4,19 +4,19 @@ import "./ItemCount.css"
 
 
 
-function ItemCount(inicial, stock) {
-    
+function ItemCount(props) {
+    const [count, setCount] = useState(1);
     return (
         <div>
             <button className="cantidad" onClick={() => {
-                if (inicial <= stock){
-                    inicial += 1;
+                if (count>1){
+                    setCount(count-1);
                 }
             }}>-</button>
-            <span>{inicial}</span>
+            <span>{count}</span>
             <button className="cantidad" onClick={() => {
-                if (inicial > 1) {
-                    inicial -= 1;
+                if (count < props.stock) {
+                    setCount(count+1);
                 }
             }}>+</button>
         </div>

@@ -8,7 +8,7 @@ function ItemListContainer(props){
                     <li>{props.nombre}</li>
                     <span>{props.precio}</span>
                     <br/>
-                    <ItemCount stock="6" inicial="1"/>
+                    <ItemCount stock="6"/>
                     <br/>
                     <button className="Boton">Comprar</button>
                 </div>
