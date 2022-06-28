@@ -1,34 +1,35 @@
 import './App.css';
 import Col from "react-bootstrap/Col"
+import Row from "react-bootstrap/Row"
 import Navbara from "./componentes/Navbar";
 import NavLat from "./componentes/NavegadorLateral"
-import Cards from "./componentes/Cards"
+import ItemListContainer from "./componentes/ItemListContainer"
 import Footer from "./componentes/Footer"
+import { render } from '@testing-library/react';
 
 function App() {
   return (
     <div className="App">
-      <body>
         <Navbara />
         <div className="d-flex">
-          <Col><NavLat/></Col>
+          <Col><NavLat /></Col>
           <Col>
-            <Col className="d-flex">
-              <Cards/>
-              <Cards/>
-              <Cards/>
-            </Col>
-            <Col className="d-flex">
-              <Cards/>
-              <Cards/>
-              <Cards/>
-            </Col>
+            <Row>
+              <ItemListContainer nombre="Vanitory" precio="$13000" />
+              <ItemListContainer nombre="Vanitory" precio="$13000" />
+              <ItemListContainer nombre="Vanitory" precio="$13000" />
+            </Row>
+            <Row>
+              <ItemListContainer nombre="Vanitory" precio="$13000" />
+              <ItemListContainer nombre="Vanitory" precio="$13000" />
+              <ItemListContainer nombre="Vanitory" precio="$13000" />
+            </Row>
           </Col>
         </div>
-        <Footer/>
-      </body>
+        <Footer />
     </div>
   );
 }
+
 
 export default App;

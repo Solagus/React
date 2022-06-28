@@ -1,0 +1,14 @@
+li{
+    list-style: none;
+}
+.Boton{
+    width: auto;
+    height: auto;
+}
+.Item{
+    font-family: Dosis;
+    border: 0.2em solid black;
+    width: 10em;
+    margin: 1em;
+    padding: 1em;
+}
