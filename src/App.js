@@ -1,6 +1,5 @@
 import './App.css';
 import Col from "react-bootstrap/Col"
-import Row from "react-bootstrap/Row"
 import Navbara from "./componentes/Navbar";
 import NavLat from "./componentes/NavegadorLateral"
 import ItemListContainer from "./componentes/ItemListContainer"
@@ -12,18 +11,9 @@ function App() {
     <div className="App">
         <Navbara />
         <div className="d-flex">
-          <Col><NavLat /></Col>
-          <Col>
-            <Row>
-              <ItemListContainer nombre="Vanitory" precio="$13000" />
-              <ItemListContainer nombre="Vanitory" precio="$13000" />
-              <ItemListContainer nombre="Vanitory" precio="$13000" />
-            </Row>
-            <Row>
-              <ItemListContainer nombre="Vanitory" precio="$13000" />
-              <ItemListContainer nombre="Vanitory" precio="$13000" />
-              <ItemListContainer nombre="Vanitory" precio="$13000" />
-            </Row>
+          <Col className="col-3"><NavLat /></Col>
+          <Col className="col-9">
+            <ItemListContainer/>
           </Col>
         </div>
         <Footer />

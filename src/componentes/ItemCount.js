@@ -1,6 +1,7 @@
-import { Component, useState } from "react";
+import {useState } from "react";
 import render from "react-dom"
 import "./ItemCount.css"
+import Button from "react-bootstrap/Button"
 
 
 
@@ -8,17 +9,17 @@ function ItemCount(props) {
     const [count, setCount] = useState(1);
     return (
         <div>
-            <button className="cantidad" onClick={() => {
+            <Button className="cantidad" onClick={() => {
                 if (count>1){
                     setCount(count-1);
                 }
-            }}>-</button>
+            }}>-</Button>
             <span>{count}</span>
-            <button className="cantidad" onClick={() => {
+            <Button className="cantidad" onClick={() => {
                 if (count < props.stock) {
                     setCount(count+1);
                 }
-            }}>+</button>
+            }}>+</Button>
         </div>
     )
 }

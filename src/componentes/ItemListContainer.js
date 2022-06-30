@@ -1,16 +1,11 @@
 import React from "react";
-import ItemCount from "./ItemCount"
+import ItemList from "./ItemList"
 import "./ItemListContainer.css"
 
 function ItemListContainer(props){
             return (
-                <div className="Item">
-                    <li>{props.nombre}</li>
-                    <span>{props.precio}</span>
-                    <br/>
-                    <ItemCount stock="6"/>
-                    <br/>
-                    <button className="Boton">Comprar</button>
+                <div >
+                    <ItemList/>
                 </div>
             )
 }
