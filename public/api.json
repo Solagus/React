@@ -1,8 +1,16 @@
 [
-    {"id":0, "nombre": "Griferia California", "imagen":"griferia-fv/california.jpg", "cantidad": 1, "stock": 5, "precio": 10000},
-    {"id":1, "nombre": "Vanitory 50X40X80", "imagen":"Vanitorys/vanitory1.jpeg", "cantidad": 1, "stock": 3, "precio": 13000},
-    {"id":2, "nombre": "Griferia Epuyen", "imagen":"griferia-fv/Epuyen.jpg", "cantidad": 1, "stock": 2, "precio": 15000},
-    {"id":3, "nombre": "Jabonera Dominic", "imagen":"Accesorios/jabonera-dominic.jpg", "cantidad": 1, "stock": 6, "precio": 5000},
-    {"id":4, "nombre": "Asiento Florencia", "imagen":"Asiento-de-inodoro/tapa-de-asiento-florencia.jpg", "cantidad": 1, "stock": 4, "precio": 10000},
-    {"id":5, "nombre": "Portarrollos Urbano", "imagen":"Accesorios/portarrollos-urbano.jpg", "cantidad": 1, "stock": 5, "precio": 4000}
+    {"id":0, "nombre": "Griferia California", "imagen":"griferia-fv/california.jpg", "cantidad": 1, "stock": 5, "precio": 10000, "color": "Cromo", "apto": "Apto para calefon y/o termotanque", "tecnologia":"Cierre tradicional o de cuerito", "caudal":"Caudal mínimo de salida, a presión estática requerida de 0.4 BAR y caudal mínimo de alimentación 20 lts por minuto (en conexiones fría y caliente): Por pico lavatorio 4,5 lts por minuto.", "descripcion":"Juego para lavatorio. Desagüe con tapita." },
+
+    {"id":1, "nombre": "Vanitory 50X40X80", "imagen":"Vanitorys/vanitory1.jpeg", "cantidad": 1, "stock": 3, "precio": 13000, "color":"Blanco", "material":"Madera laqueada"},
+
+    {"id":2, "nombre": "Griferia Epuyen", "imagen":"griferia-fv/Epuyen.jpg", "cantidad": 1, "stock": 2, "precio": 15000, "color": "Cromo", "apto": "Apto para calefon y/o termotanque", "tecnologia":"Cierre ceramico", "caudal":"Caudal mínimo de salida a presión estática requerida de 0.4 BAR y caudal mínimo de alimentación de 20 lts por minuto: 6,4 litros por minuto.", "descripcion":"Juego para lavatorio. Desagüe con tapita."},
+
+    {"id":3, "nombre": "Jabonera Dominic", "imagen":"Accesorios/jabonera-dominic.jpg", "cantidad": 1, "stock": 6, "precio": 5000, "color": "Cromo", "descripcion": "Jabonera de metal para aplicar."},
+
+    {"id":4, "nombre": "Asiento Florencia", "imagen":"Asiento-de-inodoro/tapa-de-asiento-florencia.jpg", "cantidad": 1, "stock": 4, "precio": 10000, "herraje":"Metal", "material": "Madera(HDF)", "color":"Blanco"},
+
+    {"id":5, "nombre": "Portarrollos Urbano", "imagen":"Accesorios/portarrollos-urbano.jpg", "cantidad": 1, "stock": 5, "precio": 4000, "color" : {
+        "1": "Rose Gold",
+        "2": "Cromo"
+    }}
 ]
