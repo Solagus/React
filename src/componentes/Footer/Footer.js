@@ -1,5 +1,5 @@
 import "./Footer.css"
-import instagram from "../imagenes/logo_instagram.png"
+import instagram from "../../imagenes/logo_instagram.png"
 
 function Footer() {
     return (

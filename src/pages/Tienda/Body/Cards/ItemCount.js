@@ -1,5 +1,4 @@
 import {useState } from "react";
-import render from "react-dom"
 import "./ItemCount.css"
 import Button from "react-bootstrap/Button"
 

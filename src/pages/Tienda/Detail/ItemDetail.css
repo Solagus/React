@@ -1,0 +1,25 @@
+.ItemDetail{
+    font-family: Dosis;
+    font-size: 130%;
+    border: 0.1em solid #85bdbf;
+    margin: 1.5em;
+    height: auto;
+    padding-bottom: 1em;
+    padding-left: 1em;
+}
+
+.Nombre{
+    font-weight: bolder;
+    font-size: 120%;
+}
+
+.Precio{
+    font-weight: bolder;
+    font-size: 120%;
+}
+
+.Boton{
+    width: 70%;
+    margin-left: 6em;
+    margin-top: 1em;
+}

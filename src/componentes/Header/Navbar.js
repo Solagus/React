@@ -3,6 +3,7 @@ import Nav from "react-bootstrap/Nav"
 import NavLink from "react-bootstrap/NavLink"
 import Navbar from "react-bootstrap/Navbar"
 import DropdownCarrito from "./Dropdown"
+import { Link } from "react-router-dom"
 import "./Navbar.css";
 
 function Navbara() {
@@ -10,14 +11,14 @@ function Navbara() {
     <header>
       <Navbar bg="transparent" variant="light">
         <Container id="navbar">
-          <Navbar.Brand id="logo" href="#home">Sanishop</Navbar.Brand>
+          <Navbar.Brand id="logo" href="/">Sanishop</Navbar.Brand>
           <Nav id="paginas" className="me-auto">
-            <NavLink href="#home">Inicio</NavLink>
-            <NavLink href="#features">Nosotros</NavLink>
-            <NavLink href="#pricing">Diseños</NavLink>
-            <NavLink href="#pricing">Contacto</NavLink>
-            <NavLink href="#pricing">Tienda</NavLink>
-            <DropdownCarrito/>
+            <Link to="#home" className="px-2">Inicio</Link>
+            <Link to="#features" className="px-2">Nosotros</Link>
+            <Link to="#pricing" className="px-2">Diseños</Link>
+            <Link to="#pricing" className="px-2">Contacto</Link>
+            <Link to="../../pages/Tienda/Body/Body" className="px-2">Tienda</Link>
+            <DropdownCarrito className="px-1"/>
           </Nav>
         </Container>
       </Navbar>

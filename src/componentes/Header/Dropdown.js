@@ -2,14 +2,14 @@ import Dropdown from "react-bootstrap/Dropdown"
 import DropdownToggle from "react-bootstrap/DropdownToggle";
 import DropdownMenu from "react-bootstrap/DropdownMenu";
 import Button from "react-bootstrap/Button"
-import logo from "../imagenes/986-9868123_png-file-icono-carrito-de-compras.png"
+import logo from "../../imagenes/986-9868123_png-file-icono-carrito-de-compras.png"
 import "./Dropdown.css"
 
 function DropdownCarrito() {
     return (
         <Dropdown>
             <DropdownToggle variant="transparent" id="dropdown-basic">
-                <img className="ImagenCarrito" src={logo} />
+                <img className="ImagenCarrito" src={logo} alt="" />
             </DropdownToggle>
             <DropdownMenu className="dropdownMenu dropdown-menu-lg-end">
                 <div className="lista">

@@ -1,0 +1,30 @@
+.iconos{
+    height: 10em;
+    grid-area: iconos;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3em;
+    margin-bottom: 5em;
+  }
+  .iconos__bano{
+    width: 20em;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    border-right: 0.1em solid #85bdbf;
+  }
+  .iconos__cocina{
+    width: 20em;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+    border-right: 0.1em solid #85bdbf;
+  }
+  .iconos__armario{
+    width: 20em;
+    height: 5em;
+    display: flex;
+    justify-content: center;
+  }
