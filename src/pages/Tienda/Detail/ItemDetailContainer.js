@@ -16,7 +16,7 @@ const ItemDetailContainer = () => {
 
     return (
         <div>
-            <ItemDetail imagen={require(`../../../imagenes/${detail.imagen}`)} nombre={detail.nombre} color={detail.color} apto={detail.apto} tecnologia={detail.tecnologia} caudal={detail.caudal} descripcion={detail.descripcion} precio={detail.precio} ></ItemDetail>
+            <ItemDetail imagen={detail.imagen} nombre={detail.nombre} color={detail.color} apto={detail.apto} tecnologia={detail.tecnologia} caudal={detail.caudal} descripcion={detail.descripcion} precio={detail.precio} ></ItemDetail>
         </div>
     )
 }
