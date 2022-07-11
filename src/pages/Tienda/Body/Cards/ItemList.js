@@ -6,7 +6,7 @@ function ItemList(props) {
     
     return (
         <div className="ItemList">
-            {(props.info).map(i => <Item imagen={require(`../../../../../public${i.imagen}`)} nombre={i.nombre} precio={i.precio} stock={i.stock} id={i.id} />)}
+            {(props.info).map(i => <Item imagen={i.imagen} nombre={i.nombre} precio={i.precio} stock={i.stock} id={i.id} />)}
         </div>
     )
 }
