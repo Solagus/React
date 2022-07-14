@@ -20,10 +20,11 @@ function ItemCount(props, onAdd) {
                     if (count < props.stock) {
                         setCount(count + 1);
                     }
+                    console.log("sumando", count)
                 }}>+</Button>
             </div>
             <div>
-                <Link to={`/../../pages/Tienda/Body/Detail/ItemDetailContainer/${props.id}`}><Button onClick={()=> onAdd(count)}>Detalles</Button></Link>
+                <Link to="/cart"><Button className="Boton" onClick={() => onAdd(count)}>Agregar al Carrito</Button></Link>
             </div>
         </div>
     )
