@@ -5,13 +5,14 @@ import { CartProvider } from "../../../context/cartContext";
 function Cart() {
 
     const context = useContext(CartProvider)
+    const cartItem = context.cartItem
 
     return (
-        {/* <div className="d-flex justify-content-center">
-            {context.carrito && (
+         <div className="d-flex justify-content-center">
+            {context.cartItem && (
             <div className="DivCarrito">
                 <h1>Carrito</h1>
-                {carrito.map((item) => {
+                {cartItem.map((item) => {
                     <div>
                     <p>Nombre: {item.nombre} </p>
                     <p>Cantidad: {item.cantidad}</p>
@@ -22,7 +23,7 @@ function Cart() {
                     <p>Total: </p>
                 </div>
             </div>)}
-        </div> */}
+        </div> 
     )
 }
 

@@ -6,20 +6,23 @@ import { Route, Routes } from 'react-router';
 import ItemDetailContainer from './pages/Tienda/Body/Detail/ItemDetailContainer';
 import Home from "./pages/Home/Home"
 import Cart from './pages/Tienda/Carrito/Cart';
+import { CartProvider } from './context/cartContext';
 
 
 function App() {
   return (
-    <div className="App">
-      <Navbara />
-      <Routes>
-        <Route path="/" element={<Home />} ></Route>
-        <Route path="/pages/Tienda/Body/Body" element={<Body />} ></Route>
-        <Route path="/pages/Tienda/Body/Detail/ItemDetailContainer/:productId" element={<ItemDetailContainer />} ></Route>
-        <Route path="/cart" element={<Cart />}></Route>
-      </Routes>
-      <Footer />
-    </div>
+    <CartProvider>
+      <div className="App">
+        <Navbara />
+        <Routes>
+          <Route path="/" element={<Home />} ></Route>
+          <Route path="/pages/Tienda/Body/Body" element={<Body />} ></Route>
+          <Route path="/pages/Tienda/Body/Detail/ItemDetailContainer/:productId" element={<ItemDetailContainer />} ></Route>
+          <Route path="/cart" element={<Cart />}></Route>
+        </Routes>
+        <Footer />
+      </div>
+    </CartProvider>
   );
 }
 

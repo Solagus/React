@@ -1,12 +1,14 @@
 import { useState } from "react";
 import "./ItemCount.css"
 import Button from "react-bootstrap/Button"
-import { Link } from "react-router-dom"
 
 
 
-function ItemCount(props, onAdd) {
+
+function ItemCount(props) {
     const [count, setCount] = useState(1);
+
+
     return (
         <div>
             <div>
@@ -22,9 +24,6 @@ function ItemCount(props, onAdd) {
                     }
                     console.log("sumando", count)
                 }}>+</Button>
-            </div>
-            <div>
-                <Link to="/cart"><Button className="Boton" onClick={() => onAdd(count)}>Agregar al Carrito</Button></Link>
             </div>
         </div>
     )
