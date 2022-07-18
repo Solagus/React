@@ -8,7 +8,7 @@ export const CartProvider = ({children}) => {
     const [cartItem, setCartItem] = useState(() => {
         try {
             const productosInLocalStorage = localStorage.getItem("cartProducts")
-            console.log(cartItem)
+            
         }catch(error) {
             return []
         }
@@ -19,27 +19,32 @@ export const CartProvider = ({children}) => {
     }, [cartItem])
 
     function addItemToCart(product){
-        const inCart = cartItem.find((productInCart) => productInCart.id == product.id)
+        const inCart = () => {
+            cartItem.find(
+                (productInCart) => productInCart.id === product.id)
+        }
 
         if (inCart){
             setCartItem(
                 cartItem.map((productInCart)=> {
                     if (productInCart.id === product.id){
-                        return {...inCart, amount: inCart.amount + 1}
+                        return {...inCart, cantidad: inCart.cantidad + 1}
                     }else{
                         return productInCart;
                     }
                 })
             )
         }else{
-            setCartItem([...cartItem, {...product, amount: 1}])
+            setCartItem([...cartItem, {...product, cantidad: 1}])
         }
+
+        console.log(cartItem)
     }
 
     const deleteItemToCart = (product)=>{
         const inCart = cartItem.find((productInCart) => productInCart.id == product.id)
 
-        if (inCart.amount === 1){
+        if (inCart.cantidad === 1){
             setCartItem(
                 cartItem.filter((productInCart) => (productInCart.id !== product.id)
                 )
@@ -47,7 +52,7 @@ export const CartProvider = ({children}) => {
         }else{
             setCartItem((productInCart) => {
                 if (productInCart.id === product.id){
-                    return {...inCart, amount: inCart.amount - 1}
+                    return {...inCart, cantidad: inCart.cantidad - 1}
                 } else {
                     return productInCart
                 }
@@ -60,7 +65,7 @@ export const CartProvider = ({children}) => {
     const clearCart = () => setCartItem([])
 
     return(
-        <CartContext.Provider value= {cartItem, addItemToCart, deleteItemToCart, clearCart}>
+        <CartContext.Provider value= {{cartItem, addItemToCart, deleteItemToCart, clearCart}}>
             {children}
         </CartContext.Provider>
     )
