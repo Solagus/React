@@ -16,7 +16,7 @@ const ItemDetailContainer = () => {
 
     return (
         <div>
-            <ItemDetail imagen={detail.imagen} nombre={detail.nombre} color={detail.color} apto={detail.apto} tecnologia={detail.tecnologia} caudal={detail.caudal} descripcion={detail.descripcion} precio={detail.precio} info={detail} ></ItemDetail>
+            <ItemDetail imagen={detail.imagen} nombre={detail.nombre} color={detail.color} apto={detail.apto} tecnologia={detail.tecnologia} caudal={detail.caudal} descripcion={detail.descripcion} precio={detail.precio} stock = {detail.stock} ></ItemDetail>
         </div>
     )
 }

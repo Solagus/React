@@ -10,7 +10,7 @@ import { CartContext } from "../../../../context/cartContext"
 
 
 
-const ItemDetail = (item) => {
+const ItemDetail = (item, count) => {
 
     const { addItemToCart } = useContext(CartContext)
     
@@ -29,7 +29,7 @@ const ItemDetail = (item) => {
                     <ListGroup.Item>Descripcion: {item.descripcion}</ListGroup.Item>
                     <ListGroup.Item className="Precio">${item.precio}</ListGroup.Item>
                     <ItemCount stock={item.stock}/>
-                    <Button className="Boton" onClick={() => addItemToCart(item)}>Agregar al Carrito</Button>
+                    <Button className="Boton" onClick={() => addItemToCart(item, count)}>Agregar al Carrito</Button>
                     <Link to="/cart"><Button className="Boton" onClick={() => < Cart/ >}>Terminar Compra</Button></Link>
                 </ListGroup>
             </Col>
