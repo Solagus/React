@@ -16,13 +16,13 @@ export const CartProvider = ({children}) => {
     }
 
     function addItemToCart(item, count){
-        const newCart = cartItem.filter((product) => product.id !== item.id)
-        newCart.push({...item, cantidad: count})
-        setCartItem(newCart)
-        console.log(cartItem)
+        const newCart = cartItem.filter((product) => product.id !== item.id);
+        newCart.push({...item, cantidad: count});
+        setCartItem(newCart);
+        console.log(cartItem);
     }
 
-    const deleteItemToCart = (id)=>{
+    const deleteItemFromCart = (id)=>{
         setCartItem(cartItem.filter((product) => product.id == id))
     }
 
@@ -33,7 +33,7 @@ export const CartProvider = ({children}) => {
             cartItem, 
             isInCart,
             addItemToCart, 
-            deleteItemToCart, 
+            deleteItemFromCart, 
             clearCart}}>
             {children}
         </CartContext.Provider>

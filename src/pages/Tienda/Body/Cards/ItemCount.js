@@ -1,6 +1,8 @@
 import { useState } from "react";
 import "./ItemCount.css"
 import Button from "react-bootstrap/Button"
+import { useContext } from "react"
+import { CartContext } from "../../../../context/cartContext"
 
 
 
@@ -19,6 +21,9 @@ function ItemCount(props) {
             setCount(count - 1)
         }
     }
+
+    const { addItemToCart } = useContext(CartContext)
+
     return (
         <div>
             <div>
@@ -26,6 +31,7 @@ function ItemCount(props) {
                 <span>{count}</span>
                 <Button className="cantidad" onClick={addOne}>+</Button>
             </div>
+            <Button className="Boton" onClick={() => {addItemToCart(props.item, count)}}>Agregar al Carrito</Button>
         </div>
     )
 }
