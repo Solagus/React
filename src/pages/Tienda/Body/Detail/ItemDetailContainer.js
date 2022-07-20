@@ -1,22 +1,31 @@
 import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 import ItemDetail from "./ItemDetail"
+import { getFirestore, doc, getDocs, collection } from "firebase/firestore"
 
 const ItemDetailContainer = () => {
 
     const params = useParams()
 
     const [detail, setDetail] = useState([])
+
     useEffect(() => {
-        fetch("/api.json")
-            .then((resp) => resp.json())
-            .then((data) => setDetail(data.find((product) => product.id === parseInt(params.productId))))
+        const db = getFirestore()
+
+        const collectionRef = collection(db, "products")
+
+        getDocs(collectionRef).then((snapshot) => {
+            const productRef = snapshot.docs.filter((doc) => doc.data().id === parseInt(params.productId) && doc.data()) 
+            setDetail(productRef)
+        })
     }, [])
+
+    console.log(detail)
 
 
     return (
         <div>
-            <ItemDetail imagen={detail.imagen} nombre={detail.nombre} color={detail.color} apto={detail.apto} tecnologia={detail.tecnologia} caudal={detail.caudal} descripcion={detail.descripcion} precio={detail.precio} stock = {detail.stock} ></ItemDetail>
+            <ItemDetail material={detail.material} herraje={detail.herraje} imagen={detail.imagen} nombre={detail.nombre} color={detail.color} apto={detail.apto} tecnologia={detail.tecnologia} caudal={detail.caudal} descripcion={detail.descripcion} precio={detail.precio} stock = {detail.stock} ></ItemDetail>
         </div>
     )
 }

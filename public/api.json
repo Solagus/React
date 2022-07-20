@@ -9,8 +9,5 @@
 
     {"id":4, "nombre": "Asiento Florencia", "imagen":"/Asiento-de-inodoro/tapa-de-asiento-florencia.jpg", "cantidad": 1, "stock": 4, "precio": 10000, "herraje":"Metal", "material": "Madera(HDF)", "color":"Blanco"},
 
-    {"id":5, "nombre": "Portarrollos Urbano", "imagen":"/Accesorios/portarrollos-urbano.jpg", "cantidad": 1, "stock": 5, "precio": 4000, "color" : {
-        "1": "Rose Gold",
-        "2": "Cromo"
-    }}
+    {"id":5, "nombre": "Portarrollos Urbano", "imagen":"/Accesorios/portarrollos-urbano.jpg", "cantidad": 1, "stock": 5, "precio": 4000, "color" : ["Rose Gold", " Cromo"]}
 ]

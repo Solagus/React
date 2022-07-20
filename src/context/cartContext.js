@@ -2,9 +2,9 @@ import React from "react";
 import { createContext, useEffect, useState } from "react";
 
 
-export const CartContext = React.createContext();
+const CartContext = React.createContext();
 
-export const CartProvider = ({children}) => {
+const CartProvider = ({children}) => {
     const [cartItem, setCartItem] = useState([])
 
     useEffect(() => {
@@ -16,14 +16,27 @@ export const CartProvider = ({children}) => {
     }
 
     function addItemToCart(item, count){
-        const newCart = cartItem.filter((product) => product.id !== item.id);
-        newCart.push({...item, cantidad: count});
-        setCartItem(newCart);
-        console.log(cartItem);
+        if (isInCart(item.id)){
+            const newCart = [...cartItem]
+            for (const i of newCart){
+                if (i.item.id === item.id){
+                    i.cantidad += count;
+                }
+            }
+            setCartItem(newCart)
+        }
+        else{
+            setCartItem([...cartItem, {"item":item, "cantidad": count}])
+        }
+        console.log(cartItem)
     }
 
+    console.log(cartItem);
+
     const deleteItemFromCart = (id)=>{
-        setCartItem(cartItem.filter((product) => product.id == id))
+        if (isInCart){
+            setCartItem(cartItem.filter((product) => product.id == id))
+        }
     }
 
     const clearCart = () => setCartItem([])
@@ -39,3 +52,5 @@ export const CartProvider = ({children}) => {
         </CartContext.Provider>
     )
 }
+
+export { CartContext, CartProvider }

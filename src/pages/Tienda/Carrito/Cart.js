@@ -7,6 +7,7 @@ function Cart() {
 
     const { cartItem } = useContext(CartContext)
     const { deleteItemFromCart } = useContext(CartContext)
+    const { clearCart } = useContext(CartContext)
 
     const exists = () => {
         if (cartItem != []){
@@ -33,7 +34,8 @@ function Cart() {
                 }) &&
                 <div className="DivFinalizar">
                     <p>Total: </p>
-                    <Button variant="danger" className="Button">Terminar compra</Button>
+                    <Button variant="danger">Vaciar Carrito</Button>
+                    <Button variant="succes" className="Button" onClick={clearCart} >Terminar compra</Button>
                 </div> 
                 : <p>No hay productos en el carrito</p>}
             </div>

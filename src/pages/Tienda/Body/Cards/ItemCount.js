@@ -25,8 +25,8 @@ function ItemCount(props) {
     const { addItemToCart } = useContext(CartContext)
 
     return (
-        <div>
-            <div>
+        <div >
+            <div className="Contador">
                 <Button className="cantidad" onClick={restOne}>-</Button>
                 <span>{count}</span>
                 <Button className="cantidad" onClick={addOne}>+</Button>
