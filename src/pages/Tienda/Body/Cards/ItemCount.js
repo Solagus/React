@@ -7,7 +7,7 @@ import { CartContext } from "../../../../context/cartContext"
 
 
 
-function ItemCount(props) {
+function ItemCount(props, onAdd) {
     const [count, setCount] = useState(1);
     
     const addOne = () => {
@@ -31,7 +31,7 @@ function ItemCount(props) {
                 <span>{count}</span>
                 <Button className="cantidad" onClick={addOne}>+</Button>
             </div>
-            <Button className="Boton" onClick={() => {addItemToCart(props.item, count)}}>Agregar al Carrito</Button>
+            <Button className="Boton" onClick={() => onAdd}>Agregar al Carrito</Button>
         </div>
     )
 }

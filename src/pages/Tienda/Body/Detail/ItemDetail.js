@@ -5,12 +5,25 @@ import Button from "react-bootstrap/Button"
 import ItemCount from "../Cards/ItemCount"
 import { Link } from "react-router-dom"
 import Cart from "../../Carrito/Cart"
+import { useContext, useState } from "react"
+import { CartContext } from "../../../../context/cartContext"
 
 
 
 
 const ItemDetail = (item) => {
 
+    const [cant,setCant]= useState(0)
+
+    const { addItemToCart } = useContext(CartContext)
+
+    const onAdd= ()=>{
+
+        setCant(quantity)
+
+        addItemToCart(item, quantity)
+
+    }
 
     return (
         <div className="ItemDetail d-flex">
@@ -29,7 +42,7 @@ const ItemDetail = (item) => {
                     {item.herraje ? <ListGroup.Item>Herraje: {item.herraje}</ListGroup.Item> : ""}
                     <ListGroup.Item className="Precio">${item.precio}</ListGroup.Item>
                     <div className="Botones">
-                        <ItemCount stock={item.stock} item={item}></ItemCount>
+                        <ItemCount stock={item.stock} onAdd={onAdd}></ItemCount>
                         <Link to="/cart"><Button className="Boton" onClick={() => < Cart />}>Terminar Compra</Button></Link>
                     </div>
                 </ListGroup>

@@ -1,5 +1,5 @@
 import React from "react";
-import { createContext, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 
 const CartContext = React.createContext();
@@ -12,7 +12,7 @@ const CartProvider = ({children}) => {
     }, [cartItem])
 
     const isInCart = (id) => {
-        return cartItem.find((product) => product.id == id) ? true : false
+        return cartItem.find((product) => product.id === id) ? true : false
     }
 
     function addItemToCart(item, count){
@@ -30,12 +30,12 @@ const CartProvider = ({children}) => {
         }
         console.log(cartItem)
     }
+    
 
-    console.log(cartItem);
 
     const deleteItemFromCart = (id)=>{
         if (isInCart){
-            setCartItem(cartItem.filter((product) => product.id == id))
+            setCartItem(cartItem.filter((product) => product.id === id))
         }
     }
 
