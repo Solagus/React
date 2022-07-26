@@ -1,0 +1,15 @@
+.Form{
+    width: 50em;
+    height: 20em;
+    background-color: whitesmoke;
+    border: 0.1em solid #85bdbf;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    margin-left: 17em !important;
+}
+
+.Input{
+    width: 30em;
+    text-align: center;
+}

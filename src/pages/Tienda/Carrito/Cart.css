@@ -12,6 +12,12 @@
 }
 
 .DivFinalizar{
+    width: 20em;
+    height: 10em;
+    background-color: whitesmoke;
+    border: 0.1em solid #85bdbf;
+    margin: 2em;
+    border-radius: 7px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;

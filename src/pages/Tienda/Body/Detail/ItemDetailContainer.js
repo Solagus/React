@@ -28,7 +28,6 @@ const ItemDetailContainer = () => {
 
             })}, [params.productId])
                 
-                console.log(detail)
 
 
                 return (

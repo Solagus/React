@@ -28,7 +28,7 @@ const CartProvider = ({children}) => {
         else{
             setCartItem([...cartItem, {"item":item, "cantidad": count}])
         }
-        console.log(cartItem)
+        
     }
     
 
@@ -41,6 +41,7 @@ const CartProvider = ({children}) => {
 
     const clearCart = () => setCartItem([])
 
+    console.log(cartItem)
     return(
         <CartContext.Provider value= {{
             cartItem, 
