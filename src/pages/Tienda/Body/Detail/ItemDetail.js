@@ -7,20 +7,21 @@ import { Link } from "react-router-dom"
 import { useContext, useState } from "react"
 import { CartContext } from "../../../../context/cartContext"
 import Login from "../../Login/Login"
+import Cart from "../../Carrito/Cart"
 
 
 
 
-const ItemDetail = (item) => {
+const ItemDetail = ({ item }) => {
 
     const [cant, setCant] = useState(0)
 
     const { addItemToCart } = useContext(CartContext)
 
-    const onAdd = () => {
-
+    const onAdd = (quantity) => {
+        console.log(quantity)
         if (cant > 0) {
-            
+            setCant(quantity)
 
             addItemToCart(item, cant)
         }
@@ -44,8 +45,8 @@ const ItemDetail = (item) => {
                     {item.herraje ? <ListGroup.Item>Herraje: {item.herraje}</ListGroup.Item> : ""}
                     <ListGroup.Item className="Precio">${item.precio}</ListGroup.Item>
                     <div className="Botones">
-                        <ItemCount stock={item.stock} onAdd={onAdd}></ItemCount>
-                        <Link to="/login"><Button className="Boton" onClick={() => < Login />}>Terminar Compra</Button></Link>
+                        <ItemCount stock={item} onAdd={addItemToCart}></ItemCount>
+                        {<Link to="/login"><Button className="Boton" onClick={() => < Login />}>Terminar Compra</Button></Link>}
                     </div>
                 </ListGroup>
             </Col>

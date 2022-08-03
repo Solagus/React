@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { LoginContext } from '../../../context/loginContext';
 import Cart from '../Carrito/Cart';
 import "./Login.css"
+import sendOrder from '../../../services/Firebase';
 
 function Login() {
 
@@ -28,7 +29,10 @@ function Login() {
           <Form.Control className='Input' onChange={nameHandler} value={name} type="text" placeholder="Enter Your Name" />
         </Form.Group>
 
-        <Link to="/cart"><Button variant="primary" onSubmit={loginHandler} onClick={() => <Cart />}>
+        <Link to="/cart"><Button variant="primary" onSubmit={loginHandler} onClick={() =>  {
+          <sendOrder/>;
+          <Cart />
+        }}>
           Submit
         </Button></Link>
       </Form>

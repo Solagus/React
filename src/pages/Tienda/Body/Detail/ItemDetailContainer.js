@@ -30,11 +30,11 @@ const ItemDetailContainer = () => {
                 
 
 
-                return (
-                    <div>
-                        <ItemDetail material={detail.material} herraje={detail.herraje} imagen={detail.imagen} nombre={detail.nombre} color={detail.color} apto={detail.apto} tecnologia={detail.tecnologia} caudal={detail.caudal} descripcion={detail.descripcion} precio={detail.precio} stock={detail.stock} ></ItemDetail>
-                    </div>
-                ) 
+            return (
+                <div>
+                    <ItemDetail item ={detail}></ItemDetail>
+                </div>
+            )
             }
 
 export default ItemDetailContainer

@@ -5,13 +5,12 @@ import { useContext } from "react"
 import { CartContext } from "../../../../context/cartContext"
 
 
+function ItemCount({stock, onAdd}) {
 
-
-function ItemCount(props, onAdd) {
     const [count, setCount] = useState(1);
     
     const addOne = () => {
-        if (count < props.stock){
+        if (count < stock.stock){
             setCount(count + 1)
         }
     }
@@ -25,13 +24,13 @@ function ItemCount(props, onAdd) {
     const { addItemToCart } = useContext(CartContext)
 
     return (
-        <div >
-            <div className="Contador">
+        <div>
+            <div>
                 <Button className="cantidad" onClick={restOne}>-</Button>
                 <span>{count}</span>
                 <Button className="cantidad" onClick={addOne}>+</Button>
             </div>
-            <Button className="Boton" onClick={() => onAdd}>Agregar al Carrito</Button>
+            <Button className="Boton" onClick={() => onAdd(stock, count)}>Agregar al Carrito</Button>
         </div>
     )
 }
