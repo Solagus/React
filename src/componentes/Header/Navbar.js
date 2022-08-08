@@ -5,6 +5,7 @@ import Navbar from "react-bootstrap/Navbar"
 import DropdownCarrito from "./Dropdown"
 import { Link } from "react-router-dom"
 import "./Navbar.css";
+import Home from "../../pages/Home/Home"
 
 function Navbara() {
   return (
@@ -13,7 +14,7 @@ function Navbara() {
         <Container id="navbar">
           <Navbar.Brand id="logo" href="/">Sanishop</Navbar.Brand>
           <Nav id="paginas" className="me-auto">
-            <Link to="#home" className="px-2 pag">Inicio</Link>
+            <Link to="/" onClick={()=> <Home/>} className="px-2 pag">Inicio</Link>
             <Link to="#features" className="px-2 pag">Nosotros</Link>
             <Link to="#pricing" className="px-2 pag">Diseños</Link>
             <Link to="#pricing" className="px-2 pag">Contacto</Link>
