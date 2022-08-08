@@ -13,11 +13,11 @@ function Navbara() {
         <Container id="navbar">
           <Navbar.Brand id="logo" href="/">Sanishop</Navbar.Brand>
           <Nav id="paginas" className="me-auto">
-            <Link to="#home" className="px-2">Inicio</Link>
-            <Link to="#features" className="px-2">Nosotros</Link>
-            <Link to="#pricing" className="px-2">Diseños</Link>
-            <Link to="#pricing" className="px-2">Contacto</Link>
-            <Link to="../../pages/Tienda/Body/Body" className="px-2">Tienda</Link>
+            <Link to="#home" className="px-2 pag">Inicio</Link>
+            <Link to="#features" className="px-2 pag">Nosotros</Link>
+            <Link to="#pricing" className="px-2 pag">Diseños</Link>
+            <Link to="#pricing" className="px-2 pag">Contacto</Link>
+            <Link to="../../pages/Tienda/Body/Body" className="px-2 pag">Tienda</Link>
             <DropdownCarrito className="px-1"/>
           </Nav>
         </Container>

@@ -1,10 +1,21 @@
 .DivCarrito{
     width: 70em;
-    height: 15em;
+    height: auto;
     background-color: whitesmoke;
     border: 0.1em solid #85bdbf;
     margin: 2em;
     border-radius: 7px;
+}
+
+h1{
+    margin: 0.5em 0;
+    border-bottom: 0.01em solid #85bdbf;
+    font-family: Dosis;
+}
+
+p{
+    font-family: Dosis;
+    font-size: 120%;
 }
 
 .Button{
@@ -12,14 +23,19 @@
 }
 
 .DivFinalizar{
-    width: 20em;
-    height: 10em;
+    width: auto;
+    height: auto;
     background-color: whitesmoke;
-    border: 0.1em solid #85bdbf;
+    border: 0.1em solid #889d9e;
     margin: 2em;
     border-radius: 7px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
+}
+
+.DivDatos{
+    border-bottom: 0.1em solid #85bdbf;
+    margin: 1em 0;
 }

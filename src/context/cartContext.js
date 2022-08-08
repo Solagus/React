@@ -30,15 +30,15 @@ const CartProvider = ({ children }) => {
             :
             console.log("veo cantidad", qty);
         console.log("compruebo item", cartItem);
-        setCartItem([...cartItem, { id: item.id, title: item.title, price: item.price, qty: qty }]);
+        setCartItem([...cartItem, { id: item.id, nombre: item.nombre, precio: item.precio, cantidad: qty }]);
         console.log(cartItem)
     }
 
 
 
-    const deleteItemFromCart = (id) => {
+    const deleteItemFromCart = (item) => {
         if (isInCart) {
-            setCartItem(cartItem.filter((product) => product.id === id))
+            setCartItem(cartItem.filter((product) => product.id === item.id))
         }
     }
 

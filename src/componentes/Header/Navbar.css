@@ -28,3 +28,7 @@ a{
     outline: none;
     color: black !important;
 }
+
+.pag:hover{
+    text-shadow: 2px 2px 3px #3ae6ec;
+}
